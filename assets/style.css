@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #0D1323;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+.dashboard {
+  display: grid;
+  grid-auto-rows: minmax(250px, auto);
+  grid-gap: 30px;
+  margin: 30px 10px;
+}
+.dashboard .description__content {
+  background-color: #5746EA;
+  border-radius: 20px;
+  height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.dashboard .description__content img {
+  height: 80px;
+  width: 80px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+.dashboard .description__content p {
+  line-height: 1.2em;
+  font-size: 20px;
+}
+.dashboard .description__content p span {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+}
+@media screen and (min-width: 968px) {
+  .dashboard .description__content p {
+    width: 80%;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 968px) {
+  .dashboard .description__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px 0px 0px 20px;
+  }
+}
+.dashboard nav {
+  width: 100%;
+  transform: translateY(15px);
+}
+.dashboard nav ul {
+  display: flex;
+  align-items: center;
+}
+.dashboard nav ul li {
+  list-style-type: none;
+  margin-left: 25px;
+}
+.dashboard nav ul li a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+.dashboard nav ul li a:focus {
+  color: white;
+  font-weight: bold;
+}
+@media screen and (min-width: 968px) {
+  .dashboard nav ul li {
+    margin: 20px 0;
+  }
+}
+@media screen and (min-width: 968px) {
+  .dashboard nav ul {
+    flex-direction: column;
+  }
+}
+.dashboard section {
+  margin: auto;
+  border-radius: 20px;
+  background-color: #1D204B;
+  color: #fff;
+  height: 100%;
+  position: relative;
+  width: 97%;
+}
+.dashboard section.work, .dashboard section.play, .dashboard section.study, .dashboard section.exercise, .dashboard section.social, .dashboard section.self {
+  position: relative;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+.dashboard section.work {
+  background-image: url("../images/icon-work.svg");
+  background-color: #FF8B62;
+}
+.dashboard section.play {
+  background-image: url("../images/icon-play.svg");
+  background-color: #56C2E6;
+}
+.dashboard section.study {
+  background-image: url("../images/icon-study.svg");
+  background-color: #FF5E7D;
+}
+.dashboard section.exercise {
+  background-image: url("../images/icon-exercise.svg");
+  background-color: #4BCF83;
+}
+.dashboard section.social {
+  background-image: url("../images/icon-social.svg");
+  background-color: #7235D1;
+}
+.dashboard section.self {
+  background-image: url("../images/icon-self-care.svg");
+  background-color: #F1C65C;
+}
+.dashboard section .container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80%;
+  border-radius: 20px;
+  background-color: #1D204B;
+}
+.dashboard section .container .row-title, .dashboard section .container .row-hours {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+@media screen and (min-width: 968px) {
+  .dashboard section .container .row-title, .dashboard section .container .row-hours {
+    width: 90%;
+    margin: auto;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 968px) {
+  .dashboard section .container .row-hours {
+    flex-direction: column;
+  }
+  .dashboard section .container .row-hours h3 {
+    margin: 0;
+    font-size: 50px;
+    font-weight: 700;
+  }
+}
+.dashboard section .container h2 {
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+@media screen and (min-width: 968px) {
+  .dashboard section .container h2 {
+    font-weight: bold;
+  }
+}
+.dashboard section .container h3 {
+  font-size: 25px;
+  font-weight: normal;
+}
+.dashboard section .container a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 40px;
+  transform: translateY(-10px);
+}
+@media screen and (min-width: 968px) {
+  .dashboard section .container a {
+    font-size: 50px;
+    transform: translateY(-20px);
+    font-weight: bold;
+  }
+}
+.dashboard section .container p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+}
+@media screen and (min-width: 968px) {
+  .dashboard {
+    grid-template-columns: 350px repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    grid-gap: 20px;
+    margin: 30px;
+  }
+  .dashboard .description {
+    grid-row: 1/3;
+  }
+  .dashboard .exercise {
+    grid-column: 2/3;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
